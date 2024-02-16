@@ -106,9 +106,6 @@ header .nav-primary li a:hover::after {
     animation: pisca .5s infinite;
 }
 
-.section-div img {
-    max-width: 100%;
-}
 
 @keyframes pisca {
     from {
@@ -183,19 +180,6 @@ main .sobre {
     background-color: #dc3545;
 }
 
-.sobre img {
-    animation: ladoSecao .6s ease-in-out forwards;
-    cursor: pointer;
-    grid-row: 2;
-    max-width: 100%;
-    border-radius: 4px;
-    filter: blur(0);
-}
-
-.sobre img:hover {
-    transition: .5s ease-in;
-    filter: blur(1px);
-}
 
 .sobre_conteudo {
     animation: sobeSecao .6s ease-in-out forwards;
@@ -277,9 +261,6 @@ main .sobre {
 /* RESPONSIVIDADE */
 
 @media (max-width: 992px) {
-    .section-div img {
-        display: none;
-    }
 
     .section-div {
         background-image: url(Imagens/homem_terno.png);
@@ -317,10 +298,6 @@ main .sobre {
 }
 
 @media (max-width: 992px) {
-    .sobre img {
-        grid-column: 1/-1;
-        justify-self: center;
-    }
 
     .sobre_conteudo {
         grid-column: 1/-1;
@@ -611,7 +588,9 @@ main .sobre {
 }
 
 @media (max-width: 1089px) {
-    .resume_generico .experience_content, .education_content {
+
+    .resume_generico .experience_content,
+    .education_content {
         justify-self: center;
         grid-column: 1/-1;
     }
@@ -622,6 +601,7 @@ main .sobre {
         justify-self: center;
         margin: 30px 0;
     }
+
     .resume_generico .experience {
         grid-column: 1/-1;
         grid-row: 1;
@@ -635,6 +615,7 @@ main .sobre {
     .cursos .my_skill h2 {
         justify-self: center;
     }
+
     .cursos .my_skill {
         text-align: center;
         grid-template-columns: 1fr;
@@ -770,4 +751,3 @@ footer .footer_comercial {
     font-size: 1.5rem;
     font-family: 'Poppins';
 }
-
